@@ -18,7 +18,7 @@ This ERD diagram shows the analysis of the contoso100k database that is consited
 
 This ERD shows a clear visual explanation of the analysis of the data and its end results. 
 
-The diagram is generated from the ![DBML_Source](schema/erd%20dbml.sql)
+The diagram is generated from the [ERD_schema](schema/erd%20dbml.sql)
 
 
 ### 1. Customer Segmentation
