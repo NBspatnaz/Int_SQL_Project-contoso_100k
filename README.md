@@ -29,9 +29,9 @@ Query: [1_customer_segmentation.sql](/1_customer_segmentation.sql)
 
 **visualization**
 
-![Customer Segment vs avg LTV](/images/Customer%20Segment%20and%20avg%20LTV.png)
+![Customer Segment vs avg LTV](/images/cohort_count%20and%20ltv.png)
 
-![Revenue per Segment](/images/Revenue_per_segment.png)
+![Revenue per Segment](/images/Revenue%20per%20segement.png)
 
 **Key Findings:**
 - From this analysis it's prominent that the High value customer segment coveres the major share (65.6%) of the revenue.
