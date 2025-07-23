@@ -1,4 +1,4 @@
-EXPLAIN ANALYZE
+
 WITH order_data AS
 (	SELECT 
 	c.customer_key ,
@@ -26,18 +26,8 @@ churned_customer AS
 
 	WHERE first_order <  (SELECT MAX(orderdate) FROM sales) - INTERVAL '6 months')
 
-SELECT --This is for finding out the customer status in the pie chart
-	customer_status,
-	COUNT(ur.customer_key ) AS num_customer,
-	SUM(COUNT(ur.customer_key) ) OVER() AS total_customer,
-	ROUND(COUNT(ur.customer_key )/SUM(COUNT(ur.customer_key) ) OVER(),2) AS retention_percentage
-FROM churned_customer ur
-GROUP BY
-	customer_status
-	
-	
-	
-/*-- this is for finding the cohort_analysis of the retained customer over the years
+
+
  SELECT
 	cohort_year,
 	customer_status,
@@ -48,4 +38,4 @@ FROM churned_customer ur
 GROUP BY
 	cohort_year,
 	customer_status
-	*/
+	
