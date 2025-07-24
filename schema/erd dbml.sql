@@ -1,12 +1,12 @@
 CREATE TABLE "currencyexchange" (
-  "date" date NOT NULL,
+  "date" date PRIMARY KEY,
   "fromcurrency" varchar(10) NOT NULL,
   "tocurrency" varchar(10) NOT NULL,
   "exchange" doubleprecision
 );
 
 CREATE TABLE "customer" (
-  "customerkey" int NOT NULL,
+  "customerkey" int PRIMARY KEY,
   "geoareakey" int,
   "startdt" date,
   "enddt" date,
@@ -33,7 +33,7 @@ CREATE TABLE "customer" (
 );
 
 CREATE TABLE "date" (
-  "date" date NOT NULL,
+  "date" date PRIMARY KEY,
   "datekey" int,
   "year" int,
   "yearquarter" varchar(20),
@@ -53,7 +53,7 @@ CREATE TABLE "date" (
 );
 
 CREATE TABLE "product" (
-  "productkey" int NOT NULL,
+  "productkey" int PRIMARY KEY,
   "productcode" int,
   "productname" varchar(100),
   "manufacturer" varchar(100),
@@ -70,8 +70,8 @@ CREATE TABLE "product" (
 );
 
 CREATE TABLE "sales" (
-  "orderkey" int NOT NULL,
-  "linenumber" int NOT NULL,
+  "orderkey" int,
+  "linenumber" int,
   "orderdate" date,
   "deliverydate" date,
   "customerkey" int,
@@ -82,11 +82,12 @@ CREATE TABLE "sales" (
   "netprice" doubleprecision,
   "unitcost" doubleprecision,
   "currencycode" varchar(10),
-  "exchangerate" doubleprecision
+  "exchangerate" doubleprecision,
+  PRIMARY KEY ("orderkey", "linenumber")
 );
 
 CREATE TABLE "store" (
-  "storekey" int NOT NULL,
+  "storekey" int PRIMARY KEY,
   "storecode" int,
   "geoareakey" int,
   "countrycode" varchar(10),
@@ -133,6 +134,16 @@ CREATE TABLE "cohort_analysis" (
   "total_customer" int,
   "customer_revenue" numeric
 );
+
+ALTER TABLE "store" ADD FOREIGN KEY ("storekey") REFERENCES "sales" ("storekey");
+
+ALTER TABLE "product" ADD FOREIGN KEY ("productkey") REFERENCES "sales" ("productkey");
+
+ALTER TABLE "date" ADD FOREIGN KEY ("date") REFERENCES "sales" ("orderdate");
+
+ALTER TABLE "currencyexchange" ADD FOREIGN KEY ("date") REFERENCES "sales" ("orderdate");
+
+ALTER TABLE "customer" ADD FOREIGN KEY ("customerkey") REFERENCES "sales" ("customerkey");
 
 ALTER TABLE "cohort_analysis_view" ADD FOREIGN KEY ("customer_key") REFERENCES "customer" ("customerkey");
 
