@@ -1,7 +1,7 @@
 # INTERMEDIATE SQL - SALES ANALYSIS
 
 ## Overview
-This project is based on the Contoso database of Luke Barousse that is uploaded and available on Github. As this is a self taught Intermediate SQL course under that focused on analyzing the different sales aspect of an e-commerce business called contoso. Although this project was learned and followed Luke Barousse's teaching the execution of the queries followed some different approach to solve the question rather than blindly follow the intstrustion.
+This project is based on the Contoso100K database of Luke Barousse that is uploaded and available on Github. This is a self learning Intermediate SQL course, that focuses on analyzing the different sales aspect of an e-commerce business called contoso. Although this project was learned and followed Luke Barousse's teaching the execution of the queries, I followed some different approach to solve the question rather than blindly follow the intstrustion.
 
 ## Business Questions
 With this database I tend to find out the following question 
