@@ -27,7 +27,7 @@ The diagram is generated from the [ERD_schema](schema/erd%20dbml.sql)
 
 Query: [1_customer_segmentation.sql](/1_customer_segmentation.sql)
 
-**visualization**
+**Visualization**
 
 ![Customer Segment vs avg LTV](/images/cohort_count%20and%20ltv.png)
 
@@ -55,7 +55,7 @@ Query: [1_customer_segmentation.sql](/1_customer_segmentation.sql)
 
 Query: [2_cohort_analysis.sql](/2_cohort_analysis.sql)
 
-**visualization**
+**Visualization**
 
 ![Cohort_Analysis](/images/2_cohort_analysis.png)
 
@@ -73,7 +73,9 @@ Query: [2_cohort_analysis.sql](/2_cohort_analysis.sql)
 - Analyzed the last purchased pattern of the customers
 -Finding the retention and churned rate of the customers.
 
-**visualization**
+Query: [3_customer_retention_analysis.sql](/Users/nejumbarua/Int_SQL_Project-contoso_100k/3_customer_retention_analysis.sql)
+
+**Visualization**
 
 ![Customer Retention Analysis](/images/Customer%20Retention%20Analysis.png)
 
@@ -89,7 +91,13 @@ Query: [2_cohort_analysis.sql](/2_cohort_analysis.sql)
 
 ## Strategic Recommendations 
 1. As the data shows theres a reduction of revenue generation each year along with the customer retention, the company should seriously consider changing their strategy inorder to retain their customers.
-2. In order to get fast result, the company should eminently focus on the retention of the customers from the High Value segment. The customer from this segment generates the highest revenue for the company. So the company's focus should be creating campaigns that would retain these high value customers and engage with them.
+2. In order to get fast result, the company should eminently focus on the retention of the customers from the High Value segment. The customer from this segment generates the highest revenue for the company. Analyzing only the top 10 percent customers from the total customers shows the importance of retaining this customer segment. 
+Query: 
+![Share_of_NPV_by_customer_tier](/images/NPV_Pie_chart.png)
+
+    The top 10% Premium customers generate over 38% of the total net present value, with an average NPV that is more than 5.5 times higher than Regular customers. Targeting and retaining these customers should be a priority for marketing and customer success teams.
+    So the company's focus should be creating campaigns that would retain these high value customers and engage with them.
+
 3. For the long term customer retention and higher growth in the revenue the company should try carry out campaigns to retain the customer from Mid Value Segment and slowly try to divert them to High-value customer segment by providing tailored reward points.
 4. As theres little revenue (around only 2%) generates from the low value customer segment,the company should focus on dry out the inventory gradually and try to covert them towards the mid-value customer segment.
 
